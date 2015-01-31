@@ -95,6 +95,7 @@ a {
   box-sizing: border-box;
 }
 
+.main {border-bottom: 1px solid $grey; margin-bottom: 20px;}
 
 
 .header{
@@ -187,6 +188,9 @@ a {
 	max-width: 1178px;
 	margin: 0 auto;
 	padding:52px 0 96px 0;
+	.post-panel {
+		margin-bottom: 25px;
+	}
 }
 
 .main-nav {
@@ -284,4 +288,32 @@ a {
 			height: 0;
 		}
 	}
+}
+
+.footer-nav {
+	width: 400px;
+	.nav-items {
+		margin: 0;
+		padding: 0;
+		.nav-item {
+			color: $green;
+			font-size: 12px;
+			display: inline-block;
+			margin-right: 13px;
+			&.active {
+				border-bottom: 4px solid $green;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+				color: $blackThree;
+			}
+		}
+	}
+}
+
+.footer-nav {
+	margin:0 auto 20px;
 }

@@ -11,7 +11,7 @@ angular.module('App.directives', [])
 	return {
 		templateUrl: 'app/directives/views/postPanel.tpl.html',
 		scope:{
-
+			image:"="
 		},
 		link: function(scope,elem,attr) {
 
@@ -25,7 +25,16 @@ angular.module('App.directives', [])
 					scope.collapsed = true;
 				}
 			}
+			console.log(scope.image);
+			scope.hasImage = function() {
+				if (typeof scope.image==='undefined') {
+					return false;
+				}
+				else {
+					return true;
+				}
 
+			}
 
 		}
 	};
@@ -34,5 +43,9 @@ angular.module('App.directives', [])
 .directive('mainNav', function() {
 	return {
 		templateUrl: 'app/directives/views/mainNav.tpl.html'
+	};
+}).directive('footerNav', function() {
+	return {
+		templateUrl: 'app/directives/views/footerNav.tpl.html'
 	};
 });

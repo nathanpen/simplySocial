@@ -12,6 +12,7 @@ angular.module('App.home', [])
 
 .controller('homeCtrl', function($scope, $state) {
 
+$scope.awesome = "this is fucking awesome";
 
 
 });
